@@ -102,12 +102,12 @@ Yume Shoka = 王奥的个人博客</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprlwj0c9wj31c00u04qr.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprld0h88wj31hc0u0npd.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh7hiuwdj30zk0m848c.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh9kmr1yj31ha0u0jwx.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh7mqz5dj31c00u07ku.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprlbs591fj31hc0u0b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlaqu6a8j31hc0u04qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm9vo8sij30xe0is4b9.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlbs591fj31hc0u0b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqhajtsn9j31c00u07wi.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh9ikr6xj31c00u0n0w.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprl4e7uycj31c00u0dkb.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,9 +151,7 @@ Yume Shoka = 王奥的个人博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <!--  -->
-<span id="more"></span>
-<h4 id="课程分类"><a class="markdownIt-Anchor" href="#课程分类">#</a> 课程分类</h4>
+    <h4 id="课程分类"><a class="markdownIt-Anchor" href="#课程分类">#</a> 课程分类</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取课程分类</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_cate</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="comment"># 建立查询游标</span></span><br><span class="line">    cursor = connection.cursor()</span><br><span class="line">    <span class="comment"># 执行sql语句</span></span><br><span class="line">    cursor.execute(</span><br><span class="line">        <span class="string">&quot;SELECT * FROM cate&quot;</span></span><br><span class="line">    )</span><br><span class="line">    <span class="comment"># 获取结果集</span></span><br><span class="line">    <span class="comment"># res = cursor.fetchall()</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 这里调用了以前的数据转换函数(前面的笔记记得有)</span></span><br><span class="line">    res = dictfetchall(cursor)</span><br><span class="line">    <span class="comment"># 调用get_tree函数进行 强转</span></span><br><span class="line">    res = get_tree(res)</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(json.dumps(res, indent=<span class="number">4</span>, ensure_ascii=<span class="literal">False</span>), content_type=<span class="string">&#x27;application/json&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构造课程分类层级关系(树)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_tree</span>(<span class="params">data</span>):</span></span><br><span class="line">    lists = []</span><br><span class="line">    tree = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> data:</span><br><span class="line">        <span class="comment"># 把根节点的ID作为key存在,把值作为value存在</span></span><br><span class="line">        tree[item[<span class="string">&#x27;id&#x27;</span>]] = item</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">        <span class="comment"># 如果表中的自关联pid不存在,则表示它是初始ID(根)</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> i[<span class="string">&#x27;pid&#x27;</span>]:</span><br><span class="line">            lists.append(tree[i[<span class="string">&#x27;id&#x27;</span>]])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            parent_id = i[<span class="string">&#x27;pid&#x27;</span>]</span><br><span class="line">            <span class="comment"># 如果子级不存在</span></span><br><span class="line">            <span class="keyword">if</span> <span class="string">&quot;children&quot;</span> <span class="keyword">not</span> <span class="keyword">in</span> tree[parent_id]:</span><br><span class="line">                tree[parent_id][<span class="string">&#x27;children&#x27;</span>] = []</span><br><span class="line">            tree[parent_id][<span class="string">&#x27;children&#x27;</span>].append(tree[i[<span class="string">&#x27;id&#x27;</span>]])</span><br><span class="line">    <span class="keyword">return</span> lists</span><br></pre></td></tr></table></figure>
 <h4 id="vue递归分类"><a class="markdownIt-Anchor" href="#vue递归分类">#</a> Vue 递归分类</h4>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里运用了父子组件中的 父组件向子组件传参</span></span><br><span class="line"><span class="comment"># 子组件</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;li&gt;</span><br><span class="line">        &lt;div&gt;&#123;&#123;data.name&#125;&#125;&lt;/div&gt;</span><br><span class="line">        	<span class="comment"># 当子级存在并且子级的长度大于零时</span></span><br><span class="line">            &lt;ul v-<span class="keyword">if</span>=<span class="string">&quot;data.children &amp;&amp; data.children.length &gt; 0&quot;</span>&gt;</span><br><span class="line">            	<span class="comment"># 循环 自己循环自己</span></span><br><span class="line">                &lt;mycate v-<span class="keyword">for</span>=<span class="string">&quot;child in data.children&quot;</span> :key=<span class="string">&quot;child.id&quot;</span> :data=<span class="string">&#x27;child&#x27;</span> /&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    name:<span class="string">&quot;mycate&quot;</span>,</span><br><span class="line">    <span class="comment"># 接收父组件传来的数据</span></span><br><span class="line">    props:[<span class="string">&#x27;data&#x27;</span>]</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">ul&#123;</span><br><span class="line">    padding-left: 20px;</span><br><span class="line">    <span class="built_in">list</span>-style: none;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 父组件</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">    	<span class="comment"># 给子组件传值</span></span><br><span class="line">        &lt;mycate :data=<span class="string">&quot;data&quot;</span> /&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> mycate <span class="keyword">from</span> <span class="string">&#x27;./mycate.vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            data:&#123;&#125;,</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    components:&#123;</span><br><span class="line">        mycate</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment"># mounted:模板渲染之前</span></span><br><span class="line">    <span class="comment"># created:组件声明周期初始化之前</span></span><br><span class="line">    mounted:function() &#123;</span><br><span class="line">        this.get_data();</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        get_data:function()&#123;</span><br><span class="line">            this.axios.get(&quot;http://127.0.0.1:8000/get_cate/&quot;).then(res=&gt;&#123;</span><br><span class="line">                console.log(res);</span><br><span class="line">				</span><br><span class="line">                <span class="comment"># 拼接成一个dict</span></span><br><span class="line">                var mytree = &#123;<span class="string">&quot;id&quot;</span>:<span class="number">0</span>,name:<span class="string">&quot;&quot;</span>&#125;;</span><br><span class="line">                <span class="comment"># 把data赋给一个子级</span></span><br><span class="line">                mytree[<span class="string">&#x27;children&#x27;</span>] = res.data;</span><br><span class="line">                </span><br><span class="line">                this.data = mytree</span><br><span class="line"></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
@@ -171,7 +169,7 @@ Yume Shoka = 王奥的个人博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-01-19 16:09:00" itemprop="dateModified" datetime="2021-01-19T16:09:00+08:00">2021-01-19</time>
+    <time title="修改时间：2021-04-21 21:02:12" itemprop="dateModified" datetime="2021-04-21T21:02:12+08:00">2021-04-21</time>
   </span>
 </div>
 
@@ -221,7 +219,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item left">
       
 
-  <a href="/2021/01/18/1-18/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gpqha8ebynj31ch0u0b29.jpg" title="运算基础,装饰器权限">
+  <a href="/2021/01/18/1-18/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprlidkkjlj31hc0u0npd.jpg" title="运算基础,装饰器权限">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>运算基础,装饰器权限</h3>
@@ -231,7 +229,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item right">
       
 
-  <a href="/2021/01/20/1-20/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gpqh9kmr1yj31ha0u0jwx.jpg" title="视频上传,分页">
+  <a href="/2021/01/20/1-20/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gpqha8ebynj31ch0u0b29.jpg" title="视频上传,分页">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>视频上传,分页</h3>
@@ -268,7 +266,7 @@ Yume Shoka = 王奥的个人博客</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">18</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -330,7 +328,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/11/1-11/" title="Django,Vue父子组件">Django,Vue父子组件</a></span>
+    <span><a href="/2021/01/13/1-13/" title="自动测试脚本,图片验证码">自动测试脚本,图片验证码</a></span>
   </li>
 
       
@@ -348,15 +346,6 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/18/3-18/" title="MongoDB">MongoDB</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2021/04/06/4-06/" title="redis集合">redis集合</a></span>
   </li>
 
@@ -366,7 +355,25 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/19/3-19/" title="数据库链接池,异步">数据库链接池,异步</a></span>
+    <span><a href="/2021/03/01/3-01/" title="Ant Design of Vue">Ant Design of Vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/21/1-21/" title="画中画,关注状态,循环显示外表内容">画中画,关注状态,循环显示外表内容</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/12/1-12/" title="多方式登录,自定义方法,滑动模块">多方式登录,自定义方法,滑动模块</a></span>
   </li>
 
       
@@ -384,7 +391,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/14/1-14/" title="JWT,Vue状态保持">JWT,Vue状态保持</a></span>
+    <span><a href="/2021/03/19/3-19/" title="数据库链接池,异步">数据库链接池,异步</a></span>
   </li>
 
       
@@ -393,7 +400,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/28/3-28/" title="工单 --- 总结">工单 --- 总结</a></span>
+    <span><a href="/2021/03/18/3-18/" title="MongoDB">MongoDB</a></span>
   </li>
 
       
@@ -402,16 +409,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/13/1-13/" title="自动测试脚本,图片验证码">自动测试脚本,图片验证码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/04/08/4-08/" title="微信支付">微信支付</a></span>
+    <span><a href="/2021/03/02/3-02/" title="百度云识别本地图片文字">百度云识别本地图片文字</a></span>
   </li>
 
   </ul>

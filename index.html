@@ -88,12 +88,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqha8ebynj31ch0u0b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprlaqu6a8j31hc0u04qp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm8g4zxoj30xe0is4io.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprl4e7uycj31c00u0dkb.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprl9epe87j31hc0u04qp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm57zgulj30xe0m8h0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm57zgulj30xe0m8h0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprl36i73aj31900u0x6q.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7jc912j30zk0m8dnx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprmdmw6hqj30xe0iswrn.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprl9epe87j31hc0u04qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7mqz5dj31c00u07ku.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,32 +120,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/04/08/4-08/" itemprop="url" title="微信支付"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprm6035gjj30xc0gi7fs.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2021-04-08 10:12:21">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2021-04-08T10:12:21+08:00">2021-04-08</time>
-  </span>
-</div>
-
-    <h3><a href="/2021/04/08/4-08/" itemprop="url" title="微信支付">微信支付</a></h3>
-    <div class="excerpt">
-        <!--  -->
-      
-    </div>
-    <a href="/2021/04/08/4-08/" itemprop="url" title="微信支付" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2021/04/06/4-06/" itemprop="url" title="redis集合"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprm6035gjj30xc0gi7fs.jpg"></a>
+    <a href="/2021/04/06/4-06/" itemprop="url" title="redis集合"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprlj52upfj31hc0u0qv5.jpg"></a>
   </div>
   <div class="info">
     
@@ -160,8 +135,9 @@
 
     <h3><a href="/2021/04/06/4-06/" itemprop="url" title="redis集合">redis集合</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        1集合内的数据是无序的,并且集合里面的数据具有唯一性
+# Redis 集合（set）
+12345添加数据: sadd key item其中item项可以有多个获取集合中的所有元素: smembers key判断元素是否在集合中: sismember key item 若是在返回1 反之则返回0删除元素: srem key item获取集合中元素的个数: scard key
     </div>
     <a href="/2021/04/06/4-06/" itemprop="url" title="redis集合" class="btn">more...</a>
   </div>
@@ -170,7 +146,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/28/3-28/" itemprop="url" title="工单 --- 总结"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gpqh7b9jqmj30zk0m8juq.jpg"></a>
+    <a href="/2021/03/28/3-28/" itemprop="url" title="工单 --- 总结"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprl5ul9rgj31hc0txq6c.jpg"></a>
   </div>
   <div class="info">
     
@@ -185,8 +161,13 @@
 
     <h3><a href="/2021/03/28/3-28/" itemprop="url" title="工单 --- 总结">工单 --- 总结</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # 工单
+在实现工单功能的过程中我们学习了:
+Docker,redis, 链接池，异步，权限模型，位语运算，动态表单，MongoDB, 聊天存储，等
+# Docker
+123Docker是一个开源的应用容器引擎,可以让开发者打包他们的应用以及依赖包到一个可移植性的镜像中	例子:我们前去旅游需要背着背包,但是我们可以骑车,虽然车也有重量,但是我们并不需要背着车,车是来给我们减轻负担的# 其中关于Docker的命令可以查看我之前的笔记
+# Redis
+12345Redis是一个开源的使用ANSI...
     </div>
     <a href="/2021/03/28/3-28/" itemprop="url" title="工单 --- 总结" class="btn">more...</a>
   </div>
@@ -195,7 +176,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/22/3-22/" itemprop="url" title="七牛云"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprla0jk48j31c00u0kgk.jpg"></a>
+    <a href="/2021/03/22/3-22/" itemprop="url" title="七牛云"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprl36i73aj31900u0x6q.jpg"></a>
   </div>
   <div class="info">
     
@@ -210,8 +191,8 @@
 
     <h3><a href="/2021/03/22/3-22/" itemprop="url" title="七牛云">七牛云</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # 七牛云
+12345678910111213# 首先需要下载 pip install qiniu# 进行导包from qiniu import Auth# 这一步是获取到七牛云Tokenclass QiNiu(APIView): def get(self, request): q = Auth(&amp;#x27;用户密钥管理中的AK&amp;#x27;, &amp;#x27;用户密钥管理中的SK&amp;#x27;) token = q.upload_token(&amp;#x27;你所创建的应用名称&amp;#x27;) print(token) res =...
     </div>
     <a href="/2021/03/22/3-22/" itemprop="url" title="七牛云" class="btn">more...</a>
   </div>
@@ -220,7 +201,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/19/3-19/" itemprop="url" title="数据库链接池,异步"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprlmjkiigj31hc0u04qp.jpg"></a>
+    <a href="/2021/03/19/3-19/" itemprop="url" title="数据库链接池,异步"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprljzyr0jj31c00u04qp.jpg"></a>
   </div>
   <div class="info">
     
@@ -235,8 +216,9 @@
 
     <h3><a href="/2021/03/19/3-19/" itemprop="url" title="数据库链接池,异步">数据库链接池,异步</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # 数据库链接池
+1234567# 链接池 --- 节约了建立链接和关闭链接的操作(可以帮助我们提高效率)pool = redis.ConnectionPool()# 从链接池获取链接conn = redis.Redis(connection_pool=pool)conn.set(&amp;quot;test1&amp;quot;, &amp;quot;test1&amp;quot;)print(conn.get(&amp;quot;test1&amp;quot;))例子: 在生活中就类似于学校食堂中的那个打饭的勺子
+#...
     </div>
     <a href="/2021/03/19/3-19/" itemprop="url" title="数据库链接池,异步" class="btn">more...</a>
   </div>
@@ -245,7 +227,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/18/3-18/" itemprop="url" title="MongoDB"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprm3dvlnej31c00u07wj.jpg"></a>
+    <a href="/2021/03/18/3-18/" itemprop="url" title="MongoDB"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprlaqu6a8j31hc0u04qp.jpg"></a>
   </div>
   <div class="info">
     
@@ -260,8 +242,8 @@
 
     <h3><a href="/2021/03/18/3-18/" itemprop="url" title="MongoDB">MongoDB</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # MongoDB 基础命令
+12345678shwo dbs 查看所有数据库use 数据库名 (若是有该数据库则进入,若是没有则创建)db 查看当前所在的数据库db.createCollection(&amp;quot;表名&amp;quot;) 创建表show tables | show collections 查看该数据库内的所有表db.表名.insert() 向被指定的表内添加数据db.表名.find() 查看被指定表内的所有数据 也可以增加限制条件 dinf_one() 是只查看一个db.dropDatabase()...
     </div>
     <a href="/2021/03/18/3-18/" itemprop="url" title="MongoDB" class="btn">more...</a>
   </div>
@@ -270,7 +252,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/02/3-02/" itemprop="url" title="百度云识别本地图片文字"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gpqh7b9jqmj30zk0m8juq.jpg"></a>
+    <a href="/2021/03/02/3-02/" itemprop="url" title="百度云识别本地图片文字"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gpqh7c23wgj30zk0m8aea.jpg"></a>
   </div>
   <div class="info">
     
@@ -285,8 +267,8 @@
 
     <h3><a href="/2021/03/02/3-02/" itemprop="url" title="百度云识别本地图片文字">百度云识别本地图片文字</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # 报错修正
+123456789今天中午在使用Vue,ant-design-vue组件时报错了一个: did you register the component correctly? For recursive components, make sure to provide the &amp;quot;name&amp;quot; option. 得错误这个错误的大致意思为: 组件错误我们可以通过仔细检查组件是否正确来更改次错误	我这里是由于少了一行组件的代码导致错误的: 错误如下 	import ant from...
     </div>
     <a href="/2021/03/02/3-02/" itemprop="url" title="百度云识别本地图片文字" class="btn">more...</a>
   </div>
@@ -295,7 +277,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/03/01/3-01/" itemprop="url" title="Ant Design of Vue"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprl9epe87j31hc0u04qp.jpg"></a>
+    <a href="/2021/03/01/3-01/" itemprop="url" title="Ant Design of Vue"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprlwj0c9wj31c00u04qr.jpg"></a>
   </div>
   <div class="info">
     
@@ -310,8 +292,11 @@
 
     <h3><a href="/2021/03/01/3-01/" itemprop="url" title="Ant Design of Vue">Ant Design of Vue</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        官方文档: https://www.antdv.com/docs/vue/introduce-cn/
+# button 按钮
+12345&amp;lt;a-button type&amp;#x3D;&amp;quot;primary&amp;quot;&amp;gt;	主按钮&amp;lt;&amp;#x2F;a-button&amp;gt;其中 type 的属性分别有: (dashed)虚线按钮,(danger)危险按钮其中 disabled:按钮失效状态 ghost:使按钮背景透明 size:设置按钮大小 type:设置按钮类型
+# input 输入框
+12&amp;lt;a-input...
     </div>
     <a href="/2021/03/01/3-01/" itemprop="url" title="Ant Design of Vue" class="btn">more...</a>
   </div>
@@ -320,7 +305,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/02/17/2-17/" itemprop="url" title="Docker"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gpqh7b9jqmj30zk0m8juq.jpg"></a>
+    <a href="/2021/02/17/2-17/" itemprop="url" title="Docker"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gprm3dvlnej31c00u07wj.jpg"></a>
   </div>
   <div class="info">
     
@@ -335,8 +320,9 @@
 
     <h3><a href="/2021/02/17/2-17/" itemprop="url" title="Docker">Docker</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # Docker 配置源
+123456首先输入: docker-machine ssh default再进行源的配置: sudo sed -i &amp;quot;s|EXTRA_ARGS=&amp;#x27;|EXTRA_ARGS=&amp;#x27;--registry-mirror=https://d7grpode.mirror.aliyuncs.com |g&amp;quot; /var/lib/boot2docker/profile配置完成之后输入: exit 退出然后输入: docker-machine restart default最后输入: docker info 查看即可
+#...
     </div>
     <a href="/2021/02/17/2-17/" itemprop="url" title="Docker" class="btn">more...</a>
   </div>
@@ -345,7 +331,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/01/21/1-21/" itemprop="url" title="画中画,关注状态,循环显示外表内容"><img data-src="https://tva1.sinaimg.cn/mw690/0081rIjmly8gprm80lqeuj30xe0is7gh.jpg"></a>
+    <a href="/2021/01/21/1-21/" itemprop="url" title="画中画,关注状态,循环显示外表内容"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gpqh7b9jqmj30zk0m8juq.jpg"></a>
   </div>
   <div class="info">
     
@@ -360,10 +346,35 @@
 
     <h3><a href="/2021/01/21/1-21/" itemprop="url" title="画中画,关注状态,循环显示外表内容">画中画,关注状态,循环显示外表内容</a></h3>
     <div class="excerpt">
-        <!--  -->
-      
+        # 画中画
+12345678910111213141516171819# 画中画&amp;lt;template&amp;gt;	# 需要在data中定义一个 msg	&amp;lt;van-button @click=&amp;quot;into&amp;quot;&amp;gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&amp;lt;/van-button&amp;gt;&amp;lt;/template&amp;gt;methods:&amp;#123; # 画中画功能 into:function()&amp;#123; if(video...
     </div>
     <a href="/2021/01/21/1-21/" itemprop="url" title="画中画,关注状态,循环显示外表内容" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/01/20/1-20/" itemprop="url" title="视频上传,分页"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gpqh9kmr1yj31ha0u0jwx.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-01-20 15:45:34">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-01-20T15:45:34+08:00">2021-01-20</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/01/20/1-20/" itemprop="url" title="视频上传,分页">视频上传,分页</a></h3>
+    <div class="excerpt">
+        # 视频上传:
+1234567891011121314151617181920212223242526272829303132333435363738394041424344# 文件上传class Uploader(View): def post(self, request): # 接收文件 file = request.FILES.get(&amp;quot;file&amp;quot;) # 写文件 with open(os.path.join(UPLOAD_ROOT, &amp;quot;&amp;quot;, file.name), &amp;#x27;wb&amp;#x27;) as...
+    </div>
+    <a href="/2021/01/20/1-20/" itemprop="url" title="视频上传,分页" class="btn">more...</a>
   </div>
 </article>
 
@@ -402,7 +413,7 @@
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">18</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -462,7 +473,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
+    <span><a href="/2021/03/18/3-18/" title="MongoDB">MongoDB</a></span>
   </li>
 
       
@@ -471,7 +482,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/14/1-14/" title="JWT,Vue状态保持">JWT,Vue状态保持</a></span>
+    <span><a href="/2021/01/21/1-21/" title="画中画,关注状态,循环显示外表内容">画中画,关注状态,循环显示外表内容</a></span>
   </li>
 
       
@@ -480,7 +491,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/20/1-20/" title="视频上传,分页">视频上传,分页</a></span>
+    <span><a href="/2021/03/28/3-28/" title="工单 --- 总结">工单 --- 总结</a></span>
   </li>
 
       
@@ -489,7 +500,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/13/1-13/" title="自动测试脚本,图片验证码">自动测试脚本,图片验证码</a></span>
+    <span><a href="/2021/01/16/1-16/" title="权限模型,权限操作,工厂模式">权限模型,权限操作,工厂模式</a></span>
   </li>
 
       
@@ -507,7 +518,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/12/1-12/" title="多方式登录,自定义方法,滑动模块">多方式登录,自定义方法,滑动模块</a></span>
+    <span><a href="/2021/02/17/2-17/" title="Docker">Docker</a></span>
   </li>
 
       
@@ -516,7 +527,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/08/4-08/" title="微信支付">微信支付</a></span>
+    <span><a href="/2021/01/20/1-20/" title="视频上传,分页">视频上传,分页</a></span>
   </li>
 
       
@@ -525,7 +536,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/18/3-18/" title="MongoDB">MongoDB</a></span>
+    <span><a href="/2021/03/02/3-02/" title="百度云识别本地图片文字">百度云识别本地图片文字</a></span>
   </li>
 
       
@@ -534,7 +545,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/19/3-19/" title="数据库链接池,异步">数据库链接池,异步</a></span>
+    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
   </li>
 
       
@@ -543,7 +554,7 @@
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/15/1-15/" title="路由守卫,上传接口,头像组件">路由守卫,上传接口,头像组件</a></span>
+    <span><a href="/2021/04/06/4-06/" title="redis集合">redis集合</a></span>
   </li>
 
   </ul>

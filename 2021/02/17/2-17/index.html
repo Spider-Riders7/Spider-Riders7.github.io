@@ -102,12 +102,12 @@ Yume Shoka = 王奥的个人博客</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh9kmr1yj31ha0u0jwx.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm80lqeuj30xe0is7gh.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh7hiuwdj30zk0m848c.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprl9epe87j31hc0u04qp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh9ikr6xj31c00u0n0w.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprlsqw8lpj31c00u0u0y.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm8g4zxoj30xe0is4io.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlaqu6a8j31hc0u04qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlj52upfj31hc0u0qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7c23wgj30zk0m8aea.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprla0jk48j31c00u0kgk.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqhajtsn9j31c00u07wi.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,9 +151,7 @@ Yume Shoka = 王奥的个人博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <!--  -->
-<span id="more"></span>
-<h4 id="docker配置源"><a class="markdownIt-Anchor" href="#docker配置源">#</a> Docker 配置源</h4>
+    <h4 id="docker配置源"><a class="markdownIt-Anchor" href="#docker配置源">#</a> Docker 配置源</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">首先输入: docker-machine ssh default</span><br><span class="line">再进行源的配置: sudo sed -i <span class="string">&quot;s|EXTRA_ARGS=&#x27;|EXTRA_ARGS=&#x27;--registry-mirror=https://d7grpode.mirror.aliyuncs.com |g&quot;</span> /var/lib/boot2docker/profile</span><br><span class="line">配置完成之后输入: exit 退出</span><br><span class="line"></span><br><span class="line">然后输入: docker-machine restart default</span><br><span class="line">最后输入: docker info 查看即可</span><br></pre></td></tr></table></figure>
 <h4 id="docker基础命令"><a class="markdownIt-Anchor" href="#docker基础命令">#</a> Docker 基础命令</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">docker info 显示Docker系统信息,包括镜像和容器数</span><br><span class="line">docker images 用于查看本地已拥有的镜像</span><br><span class="line">docker pull redis(镜像名称) 拉取所需要的镜像</span><br><span class="line">docker save -o <span class="string">&#x27;c:/tmp/redis.tar&#x27;</span> redis 将images中所显示的镜像下载到本地文件夹中</span><br><span class="line">docker load -i <span class="string">&#x27;c:tmp/redis.tar&#x27;</span> 将本地的镜像下载到Docker</span><br><span class="line">docker rmi -f 镜像ID 利用dockerimages中所显示的IMAGE ID删除镜像</span><br><span class="line">docker ps 显示正在运行中的容器</span><br><span class="line">docker ps -a 显示所有容器</span><br><span class="line"></span><br><span class="line">容器ID是docker -a 中的CONTAINER ID所显示的ID</span><br><span class="line">docker stop 容器ID 结束正在运行中的容器</span><br><span class="line">docker start 容器ID 运行容器ID所对应的容器</span><br><span class="line">docker rm 容器ID 删除容器ID对应的容器</span><br><span class="line"></span><br><span class="line">dockerd-machine ip default 获取本机所分配的IP</span><br><span class="line">docker run -p <span class="number">6380</span>:<span class="number">6379</span> redis 运行指定的容器(redis) <span class="number">6380</span>:<span class="number">6379</span>是指定IP</span><br><span class="line"></span><br><span class="line">win+R 输入 cmd</span><br><span class="line">连接docker所启动的容器</span><br><span class="line">redis-cli -h <span class="number">192.168</span><span class="number">.99</span><span class="number">.100</span> -p <span class="number">3680</span></span><br><span class="line">这里是运行的<span class="number">6380</span> IP</span><br><span class="line">默认IP为<span class="number">6379</span></span><br><span class="line">可以直接输入redis-cli 直接运行</span><br></pre></td></tr></table></figure>
@@ -171,7 +169,7 @@ Yume Shoka = 王奥的个人博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-01 17:13:44" itemprop="dateModified" datetime="2021-03-01T17:13:44+08:00">2021-03-01</time>
+    <time title="修改时间：2021-04-21 21:02:24" itemprop="dateModified" datetime="2021-04-21T21:02:24+08:00">2021-04-21</time>
   </span>
 </div>
 
@@ -221,7 +219,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item left">
       
 
-  <a href="/2021/01/21/1-21/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprlbs591fj31hc0u0b29.jpg" title="画中画,关注状态,循环显示外表内容">
+  <a href="/2021/01/21/1-21/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm0yrtr6j31c00u0npe.jpg" title="画中画,关注状态,循环显示外表内容">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>画中画,关注状态,循环显示外表内容</h3>
@@ -231,7 +229,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item right">
       
 
-  <a href="/2021/03/01/3-01/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm9gi0k0j30xc0i7461.jpg" title="Ant Design of Vue">
+  <a href="/2021/03/01/3-01/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprlmjkiigj31hc0u04qp.jpg" title="Ant Design of Vue">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Ant Design of Vue</h3>
@@ -268,7 +266,7 @@ Yume Shoka = 王奥的个人博客</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">18</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -330,7 +328,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/06/4-06/" title="redis集合">redis集合</a></span>
+    <span><a href="/2021/03/28/3-28/" title="工单 --- 总结">工单 --- 总结</a></span>
   </li>
 
       
@@ -339,7 +337,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/21/1-21/" title="画中画,关注状态,循环显示外表内容">画中画,关注状态,循环显示外表内容</a></span>
+    <span><a href="/2021/03/18/3-18/" title="MongoDB">MongoDB</a></span>
   </li>
 
       
@@ -348,34 +346,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/08/4-08/" title="微信支付">微信支付</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/02/3-02/" title="百度云识别本地图片文字">百度云识别本地图片文字</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/20/1-20/" title="视频上传,分页">视频上传,分页</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/18/1-18/" title="运算基础,装饰器权限">运算基础,装饰器权限</a></span>
+    <span><a href="/2021/01/12/1-12/" title="多方式登录,自定义方法,滑动模块">多方式登录,自定义方法,滑动模块</a></span>
   </li>
 
       
@@ -393,7 +364,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/02/17/2-17/" title="Docker">Docker</a></span>
+    <span><a href="/2021/01/15/1-15/" title="路由守卫,上传接口,头像组件">路由守卫,上传接口,头像组件</a></span>
   </li>
 
       
@@ -402,7 +373,34 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/19/3-19/" title="数据库链接池,异步">数据库链接池,异步</a></span>
+    <span><a href="/2021/01/20/1-20/" title="视频上传,分页">视频上传,分页</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/14/1-14/" title="JWT,Vue状态保持">JWT,Vue状态保持</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/21/1-21/" title="画中画,关注状态,循环显示外表内容">画中画,关注状态,循环显示外表内容</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/02/3-02/" title="百度云识别本地图片文字">百度云识别本地图片文字</a></span>
   </li>
 
       

@@ -102,12 +102,12 @@ Yume Shoka = 王奥的个人博客</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh9kmr1yj31ha0u0jwx.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprmdmw6hqj30xe0iswrn.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm7lpyk6j31hc0u04bu.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqha8ebynj31ch0u0b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm9gi0k0j30xc0i7461.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqha17w80j31hc0u07wh.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprl36i73aj31900u0x6q.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm6035gjj30xc0gi7fs.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm8g4zxoj30xe0is4io.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqhajtsn9j31c00u07wi.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm6e84wlj30xe0isgxx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlj52upfj31hc0u0qv5.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,9 +151,7 @@ Yume Shoka = 王奥的个人博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <!--  -->
-<span id="more"></span>
-<h4 id="mongodb基础命令"><a class="markdownIt-Anchor" href="#mongodb基础命令">#</a> MongoDB 基础命令</h4>
+    <h4 id="mongodb基础命令"><a class="markdownIt-Anchor" href="#mongodb基础命令">#</a> MongoDB 基础命令</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">shwo dbs   查看所有数据库</span><br><span class="line">use 数据库名   (若是有该数据库则进入,若是没有则创建)</span><br><span class="line">db   查看当前所在的数据库</span><br><span class="line">db.createCollection(<span class="string">&quot;表名&quot;</span>)   创建表</span><br><span class="line">show tables  |  show collections   查看该数据库内的所有表</span><br><span class="line">db.表名.insert()   向被指定的表内添加数据</span><br><span class="line">db.表名.find()   查看被指定表内的所有数据 也可以增加限制条件 dinf_one() 是只查看一个</span><br><span class="line">db.dropDatabase()   删除当前所在的数据库</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">在python中添加数据库:</span><br><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line"><span class="comment"># 和MongoDB建立连接</span></span><br><span class="line">mongo_client = pymongo.MongoClient(host=<span class="string">&quot;localhost&quot;</span>, port=<span class="number">27017</span>)</span><br><span class="line"><span class="comment"># 与某个数据库建立连接</span></span><br><span class="line">db = mongo_client.数据库</span><br><span class="line"><span class="comment"># 与数据库中的某一个表</span></span><br><span class="line">table = db.表名</span><br><span class="line"><span class="comment"># find_one是查找一个</span></span><br><span class="line"><span class="comment"># find是查找多个</span></span><br><span class="line">res = table.find_one(&#123;<span class="string">&quot;tid&quot;</span>: <span class="number">3</span>&#125;)</span><br><span class="line">res = <span class="built_in">eval</span>(res[<span class="string">&quot;tem&quot;</span>])</span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
 
@@ -170,7 +168,7 @@ Yume Shoka = 王奥的个人博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-24 15:38:19" itemprop="dateModified" datetime="2021-03-24T15:38:19+08:00">2021-03-24</time>
+    <time title="修改时间：2021-04-21 21:02:36" itemprop="dateModified" datetime="2021-04-21T21:02:36+08:00">2021-04-21</time>
   </span>
 </div>
 
@@ -220,7 +218,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item left">
       
 
-  <a href="/2021/03/02/3-02/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm9gi0k0j30xc0i7461.jpg" title="百度云识别本地图片文字">
+  <a href="/2021/03/02/3-02/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprl9epe87j31hc0u04qp.jpg" title="百度云识别本地图片文字">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>百度云识别本地图片文字</h3>
@@ -230,7 +228,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item right">
       
 
-  <a href="/2021/03/19/3-19/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm9vo8sij30xe0is4b9.jpg" title="数据库链接池,异步">
+  <a href="/2021/03/19/3-19/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm7lpyk6j31hc0u04bu.jpg" title="数据库链接池,异步">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>数据库链接池,异步</h3>
@@ -267,7 +265,7 @@ Yume Shoka = 王奥的个人博客</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">18</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -329,7 +327,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/08/4-08/" title="微信支付">微信支付</a></span>
+    <span><a href="/2021/01/11/1-11/" title="Django,Vue父子组件">Django,Vue父子组件</a></span>
   </li>
 
       
@@ -338,7 +336,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/22/3-22/" title="七牛云">七牛云</a></span>
+    <span><a href="/2021/04/06/4-06/" title="redis集合">redis集合</a></span>
   </li>
 
       
@@ -356,7 +354,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/18/1-18/" title="运算基础,装饰器权限">运算基础,装饰器权限</a></span>
+    <span><a href="/2021/01/14/1-14/" title="JWT,Vue状态保持">JWT,Vue状态保持</a></span>
   </li>
 
       
@@ -374,6 +372,24 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/18/3-18/" title="MongoDB">MongoDB</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/03/01/3-01/" title="Ant Design of Vue">Ant Design of Vue</a></span>
   </li>
 
@@ -383,16 +399,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/16/1-16/" title="权限模型,权限操作,工厂模式">权限模型,权限操作,工厂模式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/02/17/2-17/" title="Docker">Docker</a></span>
+    <span><a href="/2021/03/02/3-02/" title="百度云识别本地图片文字">百度云识别本地图片文字</a></span>
   </li>
 
       
@@ -402,15 +409,6 @@ Yume Shoka = 王奥的个人博客</title>
 </div>
 
     <span><a href="/2021/01/20/1-20/" title="视频上传,分页">视频上传,分页</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/12/1-12/" title="多方式登录,自定义方法,滑动模块">多方式登录,自定义方法,滑动模块</a></span>
   </li>
 
   </ul>

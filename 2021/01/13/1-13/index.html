@@ -102,12 +102,12 @@ Yume Shoka = 王奥的个人博客</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprkuc3tegj31hc0u0n23.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprl36i73aj31900u0x6q.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqha8ebynj31ch0u0b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm3dvlnej31c00u07wj.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh7c23wgj30zk0m8aea.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprlzbewf3j31c00u04qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7fl7nvj30zk0m8ti4.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm9vo8sij30xe0is4b9.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlwj0c9wj31c00u04qr.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7b9jqmj30zk0m8juq.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7hiuwdj30zk0m848c.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7c23wgj30zk0m8aea.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,9 +151,7 @@ Yume Shoka = 王奥的个人博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <!--  -->
-<span id="more"></span>
-<h4 id="自动测试脚本"><a class="markdownIt-Anchor" href="#自动测试脚本">#</a> 自动测试脚本</h4>
+    <h4 id="自动测试脚本"><a class="markdownIt-Anchor" href="#自动测试脚本">#</a> 自动测试脚本</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">导包: <span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成浏览器对象(对象),这里选择的是谷歌浏览器</span></span><br><span class="line">browser = webdriver.Chrome(<span class="string">&quot;绝对路径&quot;</span>)  需要把 \ 换为 /  若是不想换则可以写为 \\</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置要测试的前端页面</span></span><br><span class="line">browser.get(<span class="string">&quot;路由&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置需要测试的数据 这里需要指定测试数据所处的 标签(可以利用元素选择器来帮助我们来快速选中) [1]代表着下标</span></span><br><span class="line">browser.find_elements_by_tag_name(<span class="string">&quot;标签&quot;</span>)[<span class="number">1</span>].send_keys(<span class="string">&quot;测试数据&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若是想要自动测试滑动模块首先导包</span></span><br><span class="line"><span class="keyword">from</span> selenium.webdriver <span class="keyword">import</span> ActionChains</span><br><span class="line"><span class="comment"># 拖拽动作</span></span><br><span class="line">action = ActionChains(browser)</span><br><span class="line"><span class="comment"># 获取要拖拽对象的 标签(也就是滑动模块的那个小圆圈)</span></span><br><span class="line">button = browser.find_element_by_class_name(<span class="string">&quot;唯一标识&quot;</span>)</span><br><span class="line"><span class="comment"># 设置鼠标按住不松,拖动 .perform代表着确认(只要涉及到了动作,都需要进行确认)</span></span><br><span class="line">action.click_and_hold(button).perform()</span><br><span class="line"><span class="comment"># 开始执行动作</span></span><br><span class="line">action.reset_actions()</span><br><span class="line"><span class="comment"># move代表着移动左边是X轴坐标,右边是Y轴坐标,其中X轴是代表着横向(左右),Y轴代表着纵向(上下)</span></span><br><span class="line">action.move_by_offset(x, y).perform()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 图片验证码 StrictRedis作用详情见: 图片验证码</span></span><br><span class="line">res = StrictRedis()</span><br><span class="line"><span class="comment"># 这里是将图片验证码所生成的数字提前保存到了redis中,所以可以直接.get获取并进行转码</span></span><br><span class="line">img_code = res.get(<span class="string">&quot;code&quot;</span>).decode()</span><br><span class="line">browser.find_elements_by_tag_name(<span class="string">&quot;input&quot;</span>)[<span class="number">3</span>].send_keys(img_code)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置自动点击按钮 .click()</span></span><br><span class="line">browser.find_element_by_class_name(<span class="string">&quot;按钮的唯一标识(不要重复)&quot;</span>).click()</span><br><span class="line"><span class="comment"># 关闭浏览器</span></span><br><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
 <h4 id="图片验证码"><a class="markdownIt-Anchor" href="#图片验证码">#</a> 图片验证码</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先定义验证码类</span></span><br><span class="line">cladd MyCode(View):</span><br><span class="line">	<span class="comment"># 内置类方法</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get_random_color</span>(<span class="params">self</span>):</span></span><br><span class="line">		<span class="comment"># 随机生成三个颜色</span></span><br><span class="line">		R = random.randrange(<span class="number">255</span>)</span><br><span class="line">		G = random.randrange(<span class="number">255</span>)</span><br><span class="line">		B = random.randrange(<span class="number">255</span>)</span><br><span class="line">		<span class="comment"># 返回</span></span><br><span class="line">		<span class="keyword">return</span> (R,G,B)</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">self,request</span>):</span></span><br><span class="line">		<span class="comment"># 自定义画布,第一个参数为宽,第二个参数为高</span></span><br><span class="line">		img_size = (<span class="number">120</span>,<span class="number">50</span>)</span><br><span class="line">		<span class="comment"># 定义图像对象,参数依次为 文字颜色,画布,画布颜色</span></span><br><span class="line">		image = Image.new(<span class="string">&quot;RGB&quot;</span>, img_size, <span class="string">&quot;white&quot;</span>)</span><br><span class="line">		<span class="comment"># 定义画笔</span></span><br><span class="line">		draw = ImageDraw.Draw(image, <span class="string">&quot;RGB&quot;</span>)</span><br><span class="line">		<span class="comment"># 自定义字符串</span></span><br><span class="line">		source = <span class="string">&quot;0123456789qweasdzxcrtyfghvbn&quot;</span></span><br><span class="line">		<span class="comment"># 定义容器</span></span><br><span class="line">		code_str = <span class="string">&quot;&quot;</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment"># 循环四次</span></span><br><span class="line">		<span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">			<span class="comment"># 获取字符颜色</span></span><br><span class="line">			text_color = self.get_random_color()</span><br><span class="line">			<span class="comment"># 获取随机字符下标</span></span><br><span class="line">			tmp_num = random.randrange(<span class="built_in">len</span>(source))</span><br><span class="line">			random_str = source[tmp_num]</span><br><span class="line">			code_str += random_str</span><br><span class="line">			draw.text((<span class="number">20</span> + <span class="number">30</span> * i, <span class="number">30</span>), random_str, text_color)</span><br><span class="line">		</span><br><span class="line">		buf = io.BytesIO()</span><br><span class="line">        <span class="comment"># 保存在内存中,并转换为png格式</span></span><br><span class="line">		image.save(buf,<span class="string">&quot;png&quot;</span>)</span><br><span class="line">        </span><br><span class="line">		<span class="comment"># 保存验证码在session中 request.session你可以将它看成一个全局变量</span></span><br><span class="line">        	<span class="comment"># 获取值: request.session.get(&quot;键名&quot;)</span></span><br><span class="line"></span><br><span class="line">		request.session[<span class="string">&#x27;code&#x27;</span>] = code_str</span><br><span class="line">        </span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        # 方法一: </span></span><br><span class="line"><span class="string">        # 有些电脑可能无法使用 request.session那么可以使用StrictRedis来代替</span></span><br><span class="line"><span class="string">        # 首先导包: </span></span><br><span class="line"><span class="string">        from redis import StrictRedis</span></span><br><span class="line"><span class="string">        # 打开StrictRedis</span></span><br><span class="line"><span class="string">        res = StrictRedis()</span></span><br><span class="line"><span class="string">        # 保存</span></span><br><span class="line"><span class="string">        res.set(&quot;code&quot;, code_str)</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        # 若是想要在别的地方获取数据: </span></span><br><span class="line"><span class="string">        # 首先打开StrictRedis</span></span><br><span class="line"><span class="string">        res = StrictRedis()</span></span><br><span class="line"><span class="string">        # 然后获取到code 再进行解密</span></span><br><span class="line"><span class="string">        img_code = res.get(&quot;code&quot;).decode()</span></span><br><span class="line"><span class="string">        # 这样就可以在别的地方拿到code的值了</span></span><br><span class="line"><span class="string">		&#x27;&#x27;&#x27;</span></span><br><span class="line">        </span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">        # 方法二</span></span><br><span class="line"><span class="string">        # 赋值</span></span><br><span class="line"><span class="string">        r = redis.Redis()</span></span><br><span class="line"><span class="string">        code = r.set(&quot;code&quot;)</span></span><br><span class="line"><span class="string">        # 取值</span></span><br><span class="line"><span class="string">        r = redis.Redis()</span></span><br><span class="line"><span class="string">        code = r.get(&quot;code&quot;)</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">		<span class="keyword">return</span> HttpResponse(buf.getvalue(),<span class="string">&quot;image/png&quot;</span>)		</span><br></pre></td></tr></table></figure>
@@ -172,7 +170,7 @@ Yume Shoka = 王奥的个人博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-02 19:07:42" itemprop="dateModified" datetime="2021-03-02T19:07:42+08:00">2021-03-02</time>
+    <time title="修改时间：2021-04-21 21:01:59" itemprop="dateModified" datetime="2021-04-21T21:01:59+08:00">2021-04-21</time>
   </span>
 </div>
 
@@ -222,7 +220,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item left">
       
 
-  <a href="/2021/01/12/1-12/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm9vo8sij30xe0is4b9.jpg" title="多方式登录,自定义方法,滑动模块">
+  <a href="/2021/01/12/1-12/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm7lpyk6j31hc0u04bu.jpg" title="多方式登录,自定义方法,滑动模块">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>多方式登录,自定义方法,滑动模块</h3>
@@ -232,7 +230,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item right">
       
 
-  <a href="/2021/01/14/1-14/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gpqh7fl7nvj30zk0m8ti4.jpg" title="JWT,Vue状态保持">
+  <a href="/2021/01/14/1-14/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gpqh9hr6jkj31hc0u00vg.jpg" title="JWT,Vue状态保持">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>JWT,Vue状态保持</h3>
@@ -269,7 +267,7 @@ Yume Shoka = 王奥的个人博客</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">18</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -331,7 +329,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/11/1-11/" title="Django,Vue父子组件">Django,Vue父子组件</a></span>
+    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
   </li>
 
       
@@ -340,7 +338,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/15/1-15/" title="路由守卫,上传接口,头像组件">路由守卫,上传接口,头像组件</a></span>
+    <span><a href="/2021/03/22/3-22/" title="七牛云">七牛云</a></span>
   </li>
 
       
@@ -358,6 +356,15 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/01/21/1-21/" title="画中画,关注状态,循环显示外表内容">画中画,关注状态,循环显示外表内容</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/01/18/1-18/" title="运算基础,装饰器权限">运算基础,装饰器权限</a></span>
   </li>
 
@@ -367,25 +374,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/08/4-08/" title="微信支付">微信支付</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/16/1-16/" title="权限模型,权限操作,工厂模式">权限模型,权限操作,工厂模式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
+    <span><a href="/2021/03/19/3-19/" title="数据库链接池,异步">数据库链接池,异步</a></span>
   </li>
 
       
@@ -403,7 +392,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/06/4-06/" title="redis集合">redis集合</a></span>
+    <span><a href="/2021/01/13/1-13/" title="自动测试脚本,图片验证码">自动测试脚本,图片验证码</a></span>
   </li>
 
       
@@ -412,7 +401,16 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/03/22/3-22/" title="七牛云">七牛云</a></span>
+    <span><a href="/2021/01/16/1-16/" title="权限模型,权限操作,工厂模式">权限模型,权限操作,工厂模式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/11/1-11/" title="Django,Vue父子组件">Django,Vue父子组件</a></span>
   </li>
 
   </ul>

@@ -102,12 +102,12 @@ Yume Shoka = 王奥的个人博客</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm92v5n1j30xe0isk3i.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm6uazlhj30xe0isqgt.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gpqh7c23wgj30zk0m8aea.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprkuc3tegj31hc0u0n23.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprm80lqeuj30xe0is7gh.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/0081rIjmly8gprlzbewf3j31c00u04qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm7lpyk6j31hc0u04bu.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7hiuwdj30zk0m848c.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprlr13rllj31c00u0x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprkuc3tegj31hc0u0n23.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprl9epe87j31hc0u04qp.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm0yrtr6j31c00u0npe.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,9 +151,7 @@ Yume Shoka = 王奥的个人博客</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <!--  -->
-<span id="more"></span>
-<h4 id="七牛云"><a class="markdownIt-Anchor" href="#七牛云">#</a> 七牛云</h4>
+    <h4 id="七牛云"><a class="markdownIt-Anchor" href="#七牛云">#</a> 七牛云</h4>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先需要下载 pip install qiniu</span></span><br><span class="line"><span class="comment"># 进行导包</span></span><br><span class="line"><span class="keyword">from</span> qiniu <span class="keyword">import</span> Auth</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这一步是获取到七牛云Token</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">QiNiu</span>(<span class="params">APIView</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">self, request</span>):</span></span><br><span class="line">        q = Auth(<span class="string">&#x27;用户密钥管理中的AK&#x27;</span>, <span class="string">&#x27;用户密钥管理中的SK&#x27;</span>)</span><br><span class="line">        token = q.upload_token(<span class="string">&#x27;你所创建的应用名称&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(token)</span><br><span class="line">        res = &#123;&#125;</span><br><span class="line">        res[<span class="string">&#x27;uptoken&#x27;</span>] = token</span><br><span class="line">        <span class="keyword">return</span> Response(res)</span><br></pre></td></tr></table></figure>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;七牛云&lt;/h1&gt;</span><br><span class="line">    &#123;&#123; imgLoadPercent &#125;&#125;</span><br><span class="line">    &lt;<span class="built_in">input</span> @change=<span class="string">&quot;uploadInputchange&quot;</span> <span class="built_in">id</span>=<span class="string">&quot;uploadFileInput&quot;</span> <span class="built_in">type</span>=<span class="string">&quot;file&quot;</span> /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      uptoken: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      imgLoadPercent: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    get_token() &#123;</span><br><span class="line">      // 这里是获取七牛云token那个路由</span><br><span class="line">      this.axios.get(&quot;http://localhost:8000/uptoken/&quot;).then((result) =&gt; &#123;</span><br><span class="line">        console.log(result);</span><br><span class="line">        this.uptoken = result.data.uptoken;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    //触发<span class="built_in">input</span> change事件</span><br><span class="line">    uploadInputchange() &#123;</span><br><span class="line">      let file = document.getElementById(<span class="string">&quot;uploadFileInput&quot;</span>).files[<span class="number">0</span>]; //选择的图片文件</span><br><span class="line">      this.get_token();</span><br><span class="line">      this.uploadImgToQiniu(file);</span><br><span class="line">    &#125;,</span><br><span class="line">    //上传图片到七牛</span><br><span class="line">    uploadImgToQiniu(file) &#123;</span><br><span class="line">      console.log(this.uptoken);</span><br><span class="line"></span><br><span class="line">      const axiosInstance = this.axios.create(&#123; withCredentials: false &#125;); //withCredentials 禁止携带cookie，带cookie在七牛上有可能出现跨域问题</span><br><span class="line">      let data = new FormData();</span><br><span class="line">      data.append(<span class="string">&quot;token&quot;</span>, this.uptoken); //七牛需要的token</span><br><span class="line">      data.append(<span class="string">&quot;file&quot;</span>, file);</span><br><span class="line">      axiosInstance(&#123;</span><br><span class="line">        method: <span class="string">&quot;POST&quot;</span>,</span><br><span class="line">        url: <span class="string">&quot;http://up-z1.qiniu.com/&quot;</span>, //上传地址，华北的空间是 up-z1.qiniu.com</span><br><span class="line">        data: data,</span><br><span class="line">        timeout: <span class="number">300000000</span>, //超时时间，因为图片上传有可能需要很久</span><br><span class="line">        onUploadProgress: (e) =&gt; &#123;</span><br><span class="line">          //imgLoadPercent 是上传进度，可以用来添加进度条</span><br><span class="line"></span><br><span class="line">          var complete = e.loaded / e.total;</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span> (complete &lt; <span class="number">1</span>) &#123;</span><br><span class="line">            this.imgLoadPercent = (complete * <span class="number">100</span>).toFixed(<span class="number">2</span>) + <span class="string">&quot;%&quot;</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">        .then((data) =&gt; &#123;</span><br><span class="line">          console.log(data);</span><br><span class="line">          this.imgLoadPercent = <span class="string">&quot;100%&quot;</span>;</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(function (err) &#123;</span><br><span class="line">          //上传失败</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 
@@ -170,7 +168,7 @@ Yume Shoka = 王奥的个人博客</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2021-03-22 21:31:42" itemprop="dateModified" datetime="2021-03-22T21:31:42+08:00">2021-03-22</time>
+    <time title="修改时间：2021-04-21 21:02:45" itemprop="dateModified" datetime="2021-04-21T21:02:45+08:00">2021-04-21</time>
   </span>
 </div>
 
@@ -220,7 +218,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item left">
       
 
-  <a href="/2021/03/19/3-19/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprm6uazlhj30xe0isqgt.jpg" title="数据库链接池,异步">
+  <a href="/2021/03/19/3-19/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprljzyr0jj31c00u04qp.jpg" title="数据库链接池,异步">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>数据库链接池,异步</h3>
@@ -230,7 +228,7 @@ Yume Shoka = 王奥的个人博客</title>
     <div class="item right">
       
 
-  <a href="/2021/03/28/3-28/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprlbs591fj31hc0u0b29.jpg" title="工单 --- 总结">
+  <a href="/2021/03/28/3-28/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;0081rIjmly8gprla0jk48j31c00u0kgk.jpg" title="工单 --- 总结">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>工单 --- 总结</h3>
@@ -267,7 +265,7 @@ Yume Shoka = 王奥的个人博客</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">19</span>
+        <span class="count">18</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -329,52 +327,7 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/04/08/4-08/" title="微信支付">微信支付</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/02/17/2-17/" title="Docker">Docker</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/13/1-13/" title="自动测试脚本,图片验证码">自动测试脚本,图片验证码</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/03/02/3-02/" title="百度云识别本地图片文字">百度云识别本地图片文字</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/15/1-15/" title="路由守卫,上传接口,头像组件">路由守卫,上传接口,头像组件</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2021/01/16/1-16/" title="权限模型,权限操作,工厂模式">权限模型,权限操作,工厂模式</a></span>
+    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
   </li>
 
       
@@ -392,7 +345,43 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/11/1-11/" title="Django,Vue父子组件">Django,Vue父子组件</a></span>
+    <span><a href="/2021/01/18/1-18/" title="运算基础,装饰器权限">运算基础,装饰器权限</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/13/1-13/" title="自动测试脚本,图片验证码">自动测试脚本,图片验证码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/16/1-16/" title="权限模型,权限操作,工厂模式">权限模型,权限操作,工厂模式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/03/01/3-01/" title="Ant Design of Vue">Ant Design of Vue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/02/17/2-17/" title="Docker">Docker</a></span>
   </li>
 
       
@@ -410,7 +399,16 @@ Yume Shoka = 王奥的个人博客</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2021/01/19/1-19/" title="课程分类,Vue递归分类">课程分类,Vue递归分类</a></span>
+    <span><a href="/2021/01/14/1-14/" title="JWT,Vue状态保持">JWT,Vue状态保持</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/01/15/1-15/" title="路由守卫,上传接口,头像组件">路由守卫,上传接口,头像组件</a></span>
   </li>
 
   </ul>
