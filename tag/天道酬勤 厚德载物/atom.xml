@@ -1,20 +1,15 @@
 <?xml version="1.0"?>
-<rss version="2.0">
-    <channel>
-        <title>王奥的个人博客</title>
-        <link>https://vf77.cn</link>
-        <description></description>
-        <language>zh-CN</language>
-        <pubDate>Sun, 02 May 2021 11:14:12 +0800</pubDate>
-        <lastBuildDate>Sun, 02 May 2021 11:14:12 +0800</lastBuildDate>
-        <category>天道酬勤 厚德载物</category>
-        <item>
-            <guid isPermalink="true">https://vf77.cn/2021/05/02/0b01/</guid>
-            <title>Hexo搭建个人博客</title>
-            <link>https://vf77.cn/2021/05/02/0b01/</link>
-            <category>天道酬勤 厚德载物</category>
-            <pubDate>Sun, 02 May 2021 11:14:12 +0800</pubDate>
-            <description><![CDATA[ &lt;h4 id=&#34;什么是hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是hexo&#34;&gt;#&lt;/a&gt; 什么是 Hexo?&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://vf77.cn</id>
+    <title>王奥的个人博客 • Posts by &#34;天道酬勤 厚德载物&#34; tag</title>
+    <link href="https://vf77.cn" />
+    <updated>2021-05-02T03:14:12.244Z</updated>
+    <category term="天道酬勤 厚德载物" />
+    <entry>
+        <id>https://vf77.cn/2021/05/02/0b01/</id>
+        <title>Hexo搭建个人博客</title>
+        <link rel="alternate" href="https://vf77.cn/2021/05/02/0b01/"/>
+        <content type="html">&lt;h4 id=&#34;什么是hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是hexo&#34;&gt;#&lt;/a&gt; 什么是 Hexo?&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Hexo&lt;/strong&gt; 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RhcmluZ2ZpcmViYWxsLm5ldC9wcm9qZWN0cy9tYXJrZG93bi8=&#34;&gt;Markdown&lt;/span&gt;（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
 &lt;h4 id=&#34;安装hexo的运行环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装hexo的运行环境&#34;&gt;#&lt;/a&gt; 安装 Hexo 的运行环境&lt;/h4&gt;
 &lt;p&gt;由于 &lt;strong&gt;Hexo&lt;/strong&gt; 是基于&lt;strong&gt; node&lt;/strong&gt; 框架的，所以我们需要先安装 node，下载地址： &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==&#34;&gt;https://nodejs.org/en/&lt;/span&gt;&lt;/p&gt;
@@ -27,7 +22,8 @@
 &lt;p&gt;当然，这样搭建完的的个人博客只能在本地使用，外人无法访问，所以我们需要部署到&lt;strong&gt; Git Hub&lt;/strong&gt; 上面&lt;/p&gt;
 &lt;h4 id=&#34;创建仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建仓库&#34;&gt;#&lt;/a&gt; 创建仓库&lt;/h4&gt;
 &lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;首先在Git hub上面创建一个仓库： 仓库名规范为： 你的Git Hub用户名.github.io&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;这里有几个注意的地方： &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;注册的邮箱一定要验证，否则不会成功；&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;仓库命名必须是： username.github.io，其中username 就是你的用户名；&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
- ]]></description>
-        </item>
-    </channel>
-</rss>
+</content>
+        <category term="天道酬勤 厚德载物" />
+        <updated>2021-05-02T03:14:12.244Z</updated>
+    </entry>
+</feed>
