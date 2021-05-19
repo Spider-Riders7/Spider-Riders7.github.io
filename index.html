@@ -88,12 +88,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprm9vo8sij30xe0is4b9.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpsr8hvpjej30xe0istjp.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7jc912j30zk0m8dnx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gprl36i73aj31900u0x6q.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpqh7b9jqmj30zk0m8juq.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/0081rIjmly8gpsr9x2tcaj30xc0hl480.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/0081rIjmly8gpsrk24yrzj30xe0m9tj0.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/0081rIjmly8gprlsqw8lpj31c00u0u0y.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/0081rIjmly8gpqh7fl7nvj30zk0m8ti4.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/0081rIjmly8gprm9vo8sij30xe0is4b9.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/0081rIjmly8gprldv8h8rj31hc0u0hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/0081rIjmly8gprlr13rllj31c00u0x6p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,30 +120,265 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2021/05/02/0b01/" itemprop="url" title="Hexo搭建个人博客"><img data-src="https://tva3.sinaimg.cn/mw690/0081rIjmly8gpqh7hiuwdj30zk0m848c.jpg"></a>
+    <a href="/2021/05/06/0b12/" itemprop="url" title="七牛云上传"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gprl36i73aj31900u0x6q.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2021-05-02 11:14:12">
+  <span class="item" title="创建时间：2021-05-06 08:52:54">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2021-05-02T11:14:12+08:00">2021-05-02</time>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-06T08:52:54+08:00">2021-05-06</time>
   </span>
 </div>
 
-    <h3><a href="/2021/05/02/0b01/" itemprop="url" title="Hexo搭建个人博客">Hexo搭建个人博客</a></h3>
+    <h3><a href="/2021/05/06/0b12/" itemprop="url" title="七牛云上传">七牛云上传</a></h3>
     <div class="excerpt">
-        # 什么是 Hexo?
-Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-# 安装 Hexo 的运行环境
-由于 Hexo 是基于 node 框架的，所以我们需要先安装 node，下载地址： https://nodejs.org/en/
-到官网下载 git，一路默认安装即可，下载地址： https://git-scm.com/download
-node.js 安装完成之后可以输入 node -v 或 npm -v 来进行版本号查看
-git 安装完成之后的查看方式是： 鼠标右键一下，看下是否有 Git...
+        # 七牛云
+12345678910111213# 首先需要下载 pip install qiniu# 进行导包from qiniu import Auth# 这一步是获取到七牛云Tokenclass QiNiu(APIView): def get(self, request): q = Auth(&amp;#x27;用户密钥管理中的AK&amp;#x27;, &amp;#x27;用户密钥管理中的SK&amp;#x27;) token = q.upload_token(&amp;#x27;你所创建的应用名称&amp;#x27;) print(token) res =...
     </div>
-    <a href="/2021/05/02/0b01/" itemprop="url" title="Hexo搭建个人博客" class="btn">more...</a>
+    <a href="/2021/05/06/0b12/" itemprop="url" title="七牛云上传" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/06/0b11/" itemprop="url" title="数据库连接池,异步"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gprl4e7uycj31c00u0dkb.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-06 08:45:53">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-06T08:45:53+08:00">2021-05-06</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/06/0b11/" itemprop="url" title="数据库连接池,异步">数据库连接池,异步</a></h3>
+    <div class="excerpt">
+        # 数据库连接池
+数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术能明显提高对数据库操作的性能。
+1234567# 连接池 --- 节约了建立链接和关闭链接的操作(可以帮助我们提高效率)pool = redis.ConnectionPool()# 从链接池获取链接,当需要的时候从里面取出一个空闲的连接,当不需要时再放回去conn =...
+    </div>
+    <a href="/2021/05/06/0b11/" itemprop="url" title="数据库连接池,异步" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/06/0b10/" itemprop="url" title="MongoDB"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gpqha8ebynj31ch0u0b29.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-06 08:36:18">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-06T08:36:18+08:00">2021-05-06</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/06/0b10/" itemprop="url" title="MongoDB">MongoDB</a></h3>
+    <div class="excerpt">
+        # MobgoDB
+MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。
+MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+# MongoDB 优点
+弱一致性 (最终一致)，更能保证用户的访问速度
+文档结构的存储方式，能够更便捷的获取数据
+内置 GridFS，支持大容量的存储
+内置 Sharding
+第三方支持丰富
+性能优越
+# MongoDB 基础命令
+12345678shwo dbs 查看所有数据库use 数据库名...
+    </div>
+    <a href="/2021/05/06/0b10/" itemprop="url" title="MongoDB" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/06/0b09/" itemprop="url" title="百度云识别本地图片文字"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gprm9gi0k0j30xc0i7461.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-06 08:34:36">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-06T08:34:36+08:00">2021-05-06</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/06/0b09/" itemprop="url" title="百度云识别本地图片文字">百度云识别本地图片文字</a></h3>
+    <div class="excerpt">
+        # 百度云识别本地图片文字
+12345678910111213141516171819202122232425262728# 我们首先需要在百度云的文字识别模块内建立一个应用,并且获取到该应用的: API Key 和 Secret Keyres = requests.get(&amp;quot;https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&amp;amp;client_id=(你的API Key)&amp;amp;client_secret=(你的Secret Key)&amp;quot;)res...
+    </div>
+    <a href="/2021/05/06/0b09/" itemprop="url" title="百度云识别本地图片文字" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/06/0b08/" itemprop="url" title="Docker"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gprm6uazlhj30xe0isqgt.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-06 08:21:11">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-06T08:21:11+08:00">2021-05-06</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/06/0b08/" itemprop="url" title="Docker">Docker</a></h3>
+    <div class="excerpt">
+        # Docker
+Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。
+Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
+容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）, 更重要的是容器性能开销极低。
+#...
+    </div>
+    <a href="/2021/05/06/0b08/" itemprop="url" title="Docker" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/06/0b07/" itemprop="url" title="构建树结构"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gpqh7hiuwdj30zk0m848c.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-06 08:14:50">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-06T08:14:50+08:00">2021-05-06</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/06/0b07/" itemprop="url" title="构建树结构">构建树结构</a></h3>
+    <div class="excerpt">
+        # 课程分类
+123456789101112131415161718192021222324252627282930313233343536373839404142434445# 转换数据类型def dictfetchall(cursor): desc = cursor.description return [ dict(zip([col[0] for col in desc], row)) for row in cursor.fetchall() ]# 获取课程分类def get_cate(request): # 建立查询游标 cursor = connection.cursor() #...
+    </div>
+    <a href="/2021/05/06/0b07/" itemprop="url" title="构建树结构" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/03/0b06/" itemprop="url" title="运算基础,装饰器权限"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gpqh7mqz5dj31c00u07ku.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-03 14:23:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-03T14:23:25+08:00">2021-05-03</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/03/0b06/" itemprop="url" title="运算基础,装饰器权限">运算基础,装饰器权限</a></h3>
+    <div class="excerpt">
+        # 运算基础
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950计算机中的格式为二进制,以(零)0b开头的为二进制的变量: 满二进一: 0b01:1 0b10:2 0b11:3 0b100:4 0b101:5 0b110:6 0b111:7 0b1000:8位语运算(判断偶):要判断的数据 &amp;amp; 1 如果返回值为0则为偶数,反之则为奇数 位于运算(位移操作 右小,左大):0b10&amp;gt;&amp;gt;1 :1...
+    </div>
+    <a href="/2021/05/03/0b06/" itemprop="url" title="运算基础,装饰器权限" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/03/0b05/" itemprop="url" title="权限模型"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gprljzyr0jj31c00u04qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-03 13:50:04">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-03T13:50:04+08:00">2021-05-03</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/03/0b05/" itemprop="url" title="权限模型">权限模型</a></h3>
+    <div class="excerpt">
+        # 权限模式
+1234567891011121314权限模型分为三类: ACL,RBAC,ABACACL权限模型： 基于用户的权限认证体系（面向资源的访问控制模型）给每个用户指定相应的权限。典型的例子为： 微软的文件系统权限优点： 几乎不需要任何基础设施就可以完成访问控制。缺点： 对权限的管理比较分散，无法集中管理。无法一次性将某种权限分给一群用户，也无法一次性回收。RBAC权限模型： 是基于角色的访问控制权限的分配和回收都是基于角色的，只有对于的角色有相应的权限。用户可以拥有一种或多种角色。优点： 权限的管理非常方便，权限只与角色相关，不与用户产生直接的关联。ABAC权限模型：...
+    </div>
+    <a href="/2021/05/03/0b05/" itemprop="url" title="权限模型" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/03/0b04/" itemprop="url" title="JWT,Vue状态保持"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gpqh7jc912j30zk0m8dnx.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-03 13:33:50">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-03T13:33:50+08:00">2021-05-03</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/03/0b04/" itemprop="url" title="JWT,Vue状态保持">JWT,Vue状态保持</a></h3>
+    <div class="excerpt">
+        # JWT
+Json web token（JWT）根据官网的定义，是为了在网络应用环境间传递声明而执行的一种基于 JSON 的开放标准（(RFC 7519). 该 token 被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT 的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该 token 也可直接被用于认证，也可被加密。
+12345678910# 想要使用JWT 首先需要导包import jwt# 进行编码 进行编码的数据只能是字典类型...
+    </div>
+    <a href="/2021/05/03/0b04/" itemprop="url" title="JWT,Vue状态保持" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2021/05/03/0b03/" itemprop="url" title="自动测试脚本,生成图片验证码"><img data-src="https://tva4.sinaimg.cn/mw690/0081rIjmly8gprld0h88wj31hc0u0npd.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2021-05-03 13:28:25">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2021-05-03T13:28:25+08:00">2021-05-03</time>
+  </span>
+</div>
+
+    <h3><a href="/2021/05/03/0b03/" itemprop="url" title="自动测试脚本,生成图片验证码">自动测试脚本,生成图片验证码</a></h3>
+    <div class="excerpt">
+        # 自动测试脚本
+12345678910111213141516171819202122232425262728293031323334导包: from selenium import webdriver# 生成浏览器对象(对象),这里选择的是谷歌浏览器browser = webdriver.Chrome(&amp;quot;绝对路径&amp;quot;) 需要把 \ 换为 / 若是不想换则可以写为 \\# 设置要测试的前端页面browser.get(&amp;quot;路由&amp;quot;)# 设置需要测试的数据 这里需要指定测试数据所处的 标签(可以利用元素选择器来帮助我们来快速选中)...
+    </div>
+    <a href="/2021/05/03/0b03/" itemprop="url" title="自动测试脚本,生成图片验证码" class="btn">more...</a>
   </div>
 </article>
 
@@ -152,6 +387,11 @@ git 安装完成之后的查看方式是： 鼠标右键一下，看下是否有
   </div>
 
   
+  <nav class="pagination">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
+    </div>
+  </nav>
 
 
 
@@ -177,7 +417,7 @@ git 安装完成之后的查看方式是： 鼠标右键一下，看下是否有
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">1</span>
+        <span class="count">12</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -214,6 +454,7 @@ git 安装完成之后的查看方式是： 鼠标右键一下，看下是否有
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/page/2/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -236,7 +477,88 @@ git 安装完成之后的查看方式是： 鼠标右键一下，看下是否有
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2021/05/06/0b11/" title="数据库连接池,异步">数据库连接池,异步</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/03/0b03/" title="自动测试脚本,生成图片验证码">自动测试脚本,生成图片验证码</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/03/0b04/" title="JWT,Vue状态保持">JWT,Vue状态保持</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/06/0b08/" title="Docker">Docker</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2021/05/02/0b01/" title="Hexo搭建个人博客">Hexo搭建个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/06/0b07/" title="构建树结构">构建树结构</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/03/0b06/" title="运算基础,装饰器权限">运算基础,装饰器权限</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/03/0b05/" title="权限模型">权限模型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/06/0b12/" title="七牛云上传">七牛云上传</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2021/05/06/0b10/" title="MongoDB">MongoDB</a></span>
   </li>
 
   </ul>
